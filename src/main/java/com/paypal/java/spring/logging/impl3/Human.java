@@ -11,10 +11,6 @@ public class Human implements Animal {
 
 	static Logger logger = LoggerFactory.getLogger(Human.class);
 
-	public Human() {
-
-	}
-
 	public String getType() {
 		logger.info("INFO - This is Human Class");
 		logger.warn("WARN - This is Human Class");

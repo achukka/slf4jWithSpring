@@ -11,9 +11,6 @@ public class Cow implements Animal {
 
 	static Logger logger = LoggerFactory.getLogger(Cow.class);
 
-	public Cow() {
-	}
-
 	public String getType() {
 		logger.info("INFO - This is Cow Class");
 		logger.warn("WARN - This is Cow Class");

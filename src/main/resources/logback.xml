@@ -1,34 +1,28 @@
 <configuration>
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
-			</pattern>
+			<pattern>%d [%thread] %-5level  %logger{35} - %msg%n</pattern>
 		</encoder>
 	</appender>
 
-	<logger name="" level="DEBUG" />
-	<logger name="com.paypal.java.spring.logging.app" additivity="false">
-		<level value="DEBUG" />
+	<logger name="com.paypal.java.spring.logging.app" additivity="false"
+		level="ERROR" >
 		<appender-ref ref="STDOUT" />
 	</logger>
 
-	<logger name="com.paypal.java.spring.logging.impl" additivity="false">
-		<level value="WARN" />
+	<logger name="com.paypal.java.spring.logging.impl" additivity="false" level="DEBUG">
 		<appender-ref ref="STDOUT" />
 	</logger>
 
-	<logger name="com.paypal.java.spring.logging.impl2" additivity="false">
-		<level value="INFO" />
+	<logger name="com.paypal.java.spring.logging.impl2" additivity="false" level="INFO" >
 		<appender-ref ref="STDOUT" />
 	</logger>
 
-	<logger name="com.paypal.java.spring.logging.impl3" additivity="false">
-		<level value="WARN" />
-		<appender-ref ref="DEBUG" />
+	<logger name="com.paypal.java.spring.logging.impl3" additivity="false" level="WARN">
+		<appender-ref ref="STDOUT" />
 	</logger>
 
-	<root>
-		<level value="DEBUG">
+	<root level="TRACE">
 			<appender-ref ref="STDOUT" />
 	</root>
 </configuration>

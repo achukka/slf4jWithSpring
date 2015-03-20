@@ -1,7 +1,6 @@
 package com.paypal.java.spring.logging.app;
 
 import org.slf4j.Logger;
-
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -16,11 +15,9 @@ import com.paypal.java.spring.logging.impl3.Human;
  * 
  */
 public class MainApp {
-	static Logger LOGGER = LoggerFactory.getLogger(MainApp.class);
-
-	public MainApp() {
-	}
-
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(MainApp.class);
+	
 	public static void main(String[] args) {
 
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
@@ -34,12 +31,15 @@ public class MainApp {
 		app.printDolphinMessages(applicationContext);
 		app.printCowMessages(applicationContext);
 
+		LOGGER.info("INFO - This is MainApp Class");
+		LOGGER.warn("WARN - This is MainApp Class");
+		LOGGER.debug("DEBUG - This is MainApp Class");
+		LOGGER.error("ERROR - This is MainApp Class");
 		System.out
 				.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Output Ends>>>>>>>>>>>>>>>>>");
 	}
 
 	private void printCowMessages(ApplicationContext applicationContext) {
-		LOGGER.debug("TEST");
 		System.out.println("Cow Messages");
 		Cow cowObj = (Cow) applicationContext.getBean("cow");
 		System.out.println(cowObj.getType());

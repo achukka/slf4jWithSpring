@@ -11,9 +11,6 @@ public class Dolphin implements Animal {
 
 	static Logger logger = LoggerFactory.getLogger(Dolphin.class);
 
-	public Dolphin() {
-	}
-
 	public String getType() {
 		logger.info("INFO - This is Dolphin Class");
 		logger.warn("WARN - This is Dolphin Class");

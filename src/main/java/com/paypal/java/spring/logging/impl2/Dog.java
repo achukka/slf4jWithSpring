@@ -11,9 +11,6 @@ import com.paypal.java.spring.logging.api.Animal;
 public class Dog implements Animal {
 	static Logger logger = LoggerFactory.getLogger(Dog.class);
 
-	public Dog() {
-	}
-
 	public String getType() {
 		logger.info("INFO - This is Dog Class");
 		logger.warn("WARN - This is Dog Class");
