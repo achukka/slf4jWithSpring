@@ -1,6 +1,5 @@
 # slf4jWithSpring
 
-springbeanScope
 A program to demonstrate SLF4j with spring by enabling different logging levels to different packages.
 
 To execute the program, Go to the folder where pom.xml file is available and run the following commands:
